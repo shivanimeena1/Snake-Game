@@ -1,0 +1,117 @@
+body {
+  background-color: black;
+  overflow: hidden;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 732px) {
+  .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+}
+.container {
+  height: 15rem;
+  width: 15rem;
+  border: 0.2px double rgb(167, 0, 139);
+  box-shadow: 0px 0px 8px 0.2px rgb(167, 0, 139);
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.cell {
+  /* border: 0.5px solid black; */
+}
+
+.food {
+  box-shadow: 0px 0px 7px 0.2px red inset;
+  border-radius: 70%;
+}
+
+.snake {
+  background-color: green;
+  box-shadow: 0px 0px 4px 1px black inset;
+}
+
+.Score {
+  box-shadow: 0px 0px 5px 0.2px rgb(167, 0, 139);
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  margin: 15px;
+}
+
+.losemsg {
+  font-size: 47px;
+  height: 50px;
+  margin-bottom: 20px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #e60073,
+      0 0 30px #e60073, 0 0 30px #e60073, 0 0 30px #e60073, 0 0 30px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 20px #ff4da6, 0 0 30px #ff4da6,
+      0 0 30px #ff4da6, 0 0 30px #ff4da6, 0 0 30px #ff4da6, 0 0 30px #ff4da6;
+  }
+}
+
+.result_reset {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.rest_btn {
+  padding-inline: 15px;
+  padding-block: 5px;
+  color: #fff;
+  /* font-weight: 600; */
+  font-size: 15px;
+  background-color: transparent;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-shadow: 0 0 10px rgb(167, 0, 139);
+  border: 1px solid rgb(167, 0, 139);
+  box-shadow: 0px 0px 5px 0.2px rgb(167, 0, 139);
+}
+
+.loader_position {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 70px;
+}
+
+.board_score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
